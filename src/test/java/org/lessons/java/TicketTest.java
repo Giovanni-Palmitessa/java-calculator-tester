@@ -9,10 +9,19 @@ class TicketTest {
 
     @Test
     @DisplayName("Calculate Ticket price for Junior")
-    void getTicketPrice() {
+    void getTicketPriceJ() {
         Ticket ticket = new Ticket(50, 15);
         double price = ticket.getTicketPrice();
         assertEquals(8.4, price, 0.01);
         assertNotEquals(25,price,0.01);
+    }
+
+    @Test
+    @DisplayName("Calculate Ticket price for Senior")
+    void getTicketPriceS() {
+        Ticket ticket = new Ticket(150, 70);
+        double price = ticket.getTicketPrice();
+        assertEquals(18.9, price, 0.01);
+        assertNotEquals(67,price,0.01);
     }
 }
