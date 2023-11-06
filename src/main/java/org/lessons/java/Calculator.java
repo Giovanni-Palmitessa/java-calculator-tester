@@ -26,6 +26,9 @@ public class Calculator {
     }
     //Divide
     public float divide(float num1, float num2){
+        if (num2 == 0) {
+            throw new IllegalArgumentException("Il dividendo non può essere 0!");
+        }
         return num1 / num2;
     }
     //Divide
