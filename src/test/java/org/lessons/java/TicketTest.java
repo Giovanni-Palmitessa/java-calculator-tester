@@ -31,4 +31,12 @@ class TicketTest {
         assertEquals(16.38, price, 0.01);
         assertNotEquals(152,price,0.01);
     }
+
+    @Test
+    @DisplayName("Test for invalid number (<0)")
+    void checkInvalidNumber() {
+        assertThrows(IllegalArgumentException.class, () -> new Ticket(-10, 25));
+        assertThrows(IllegalArgumentException.class, () -> new Ticket(400, -68));
+    }
+
 }
