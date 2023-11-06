@@ -15,7 +15,6 @@ class TicketTest {
         assertEquals(8.4, price, 0.01);
         assertNotEquals(25,price,0.01);
     }
-
     @Test
     @DisplayName("Calculate Ticket price for Senior")
     void getTicketPriceS() {
@@ -23,5 +22,13 @@ class TicketTest {
         double price = ticket.getTicketPrice();
         assertEquals(18.9, price, 0.01);
         assertNotEquals(67,price,0.01);
+    }
+    @Test
+    @DisplayName("Calculate Ticket price for Adult")
+    void getTicketPriceA() {
+        Ticket ticket = new Ticket(78, 42);
+        double price = ticket.getTicketPrice();
+        assertEquals(16.38, price, 0.01);
+        assertNotEquals(152,price,0.01);
     }
 }
