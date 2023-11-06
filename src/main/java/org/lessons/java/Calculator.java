@@ -14,4 +14,9 @@ public class Calculator {
     public float getNum2() {
         return num2;
     }
+
+    //Metodi
+    public float add(float num1, float num2){
+        return num1 + num2;
+    }
 }
