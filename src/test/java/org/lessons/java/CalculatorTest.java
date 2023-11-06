@@ -24,10 +24,19 @@ class CalculatorTest {
     }
 
     @Test
+    @DisplayName("Test for divide numbers")
     void divide() {
+        float result = Calculator.divide(10.0f, 5.0f);
+        assertEquals(2.0f, result);
+        assertNotEquals(3.0f, result);
+        assertThrows(IllegalArgumentException.class, () -> Calculator.divide(8.0f, 0.0f));
     }
 
     @Test
+    @DisplayName("Test for multiply numbers")
     void multiply() {
+        float result = Calculator.multiply(10.0f, 5.0f);
+        assertEquals(50.0f, result);
+        assertNotEquals(30.0f, result);
     }
 }
