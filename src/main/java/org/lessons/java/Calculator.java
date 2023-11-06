@@ -16,7 +16,12 @@ public class Calculator {
     }
 
     //Metodi
+    //Add
     public float add(float num1, float num2){
         return num1 + num2;
+    }
+    //Subtract
+    public float subtract(float num1, float num2){
+        return num1 - num2;
     }
 }
